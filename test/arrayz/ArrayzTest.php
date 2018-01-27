@@ -1,8 +1,9 @@
 <?php
 
 use arrayz\Arrayz;
+use PHPUnit\Framework\TestCase;
 
-class ArrayzTest extends PHPUnit_Framework_TestCase {
+class ArrayzTest extends TestCase {
 
    private static $data = array(
       "a" => "a",
