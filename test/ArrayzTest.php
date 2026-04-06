@@ -40,7 +40,7 @@ class ArrayzTest extends TestCase
       $this->assertEquals("g", Arrayz::get("  c   > f    > g    ", self::$data));
    }
 
-   public function testHappyPathToPrimitives()
+   public function testPathToPrimitives()
    {
       $this->assertEquals("a", Arrayz::get("a", self::$data));
       $this->assertEquals("b", Arrayz::get("b", self::$data));
@@ -52,26 +52,26 @@ class ArrayzTest extends TestCase
       $this->assertEquals("h", Arrayz::get("c > f > h", self::$data));
    }
 
-   public function testBrokenPath()
-   {
-      $this->assertEquals(null, Arrayz::get("not", self::$data));
-      $this->assertEquals(null, Arrayz::get("a > not", self::$data));
-      $this->assertEquals(null, Arrayz::get("c > f > not", self::$data));
-      $this->assertEquals(null, Arrayz::get("c > not > x", self::$data));
-   }
-
    public function testPathToArray()
    {
       $this->assertTrue(is_array(Arrayz::get("c > f", self::$data)));
       $this->assertTrue(is_array(Arrayz::get("c > f > i", self::$data)));
    }
 
-   public function testPathValueInIndexedArray()
+   public function testPathToValueInIndexedArray()
    {
       $this->assertEquals(1, Arrayz::get("c > f > i > 0", self::$data));
       $this->assertEquals(33, Arrayz::get("c > f > l > 0", self::$data));
       $this->assertEquals(33, Arrayz::get("c > f > l > 0", self::$data));
       $this->assertTrue(is_array(Arrayz::get("c > f > l > 1", self::$data)));
       $this->assertEquals("x", Arrayz::get("c > f > l > 1 > 0", self::$data));
+   }
+
+   public function testBrokenPath()
+   {
+      $this->assertEquals(null, Arrayz::get("not", self::$data));
+      $this->assertEquals(null, Arrayz::get("a > not", self::$data));
+      $this->assertEquals(null, Arrayz::get("c > f > not", self::$data));
+      $this->assertEquals(null, Arrayz::get("c > not > x", self::$data));
    }
 }
