@@ -3,7 +3,7 @@ arrayz
 
 ### 1. Intro
 
-This library allows you to navigate **associative multi-dimentional arrays** in depth, without having to worry about the existence of the keys you are trying to access.
+This library allows you to navigate **multi-dimentional arrays** in depth, without having to worry about the existence of the keys you are trying to access.
 
 ### 2. Examples
 
