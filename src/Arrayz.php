@@ -9,7 +9,7 @@ use RuntimeException;
 class Arrayz
 {
    /**
-    * Get an (however deep) value safely from the provided array
+    * Safely get a value of the provided array
     */
    public static function get(string $path, array $data): mixed
    {
