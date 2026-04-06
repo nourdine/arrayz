@@ -7,7 +7,7 @@ This library allows you to navigate **multi-dimentional arrays** in depth, witho
 
 ### 2. Examples
 
-Given an associative multi-dimentional array like the following:
+Given an associative multidimentional array like the following:
 
 ```php
 $data = [
