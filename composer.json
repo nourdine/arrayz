@@ -1,20 +1,21 @@
 {
    "name": "nourdine/arrayz",
    "type": "library",
-   "description": "Utility to quickly and safely access PHP arrays",
-   "keywords": ["array"],
-   "license": "MIT",
-   "authors": [
-      {
-         "name": "fabs aka (nourdine)"
-      }
+   "description": "Utility to safely access values of PHP arrays",
+   "keywords": [
+      "array"
    ],
-   "require": {
-      "php": ">=5.3"
+   "license": "MIT",
+   "require-dev": {
+      "phpunit/phpunit": "^9.5"
    },
    "autoload": {
-      "psr-0": {
-         "arrayz": "src/"
+      "psr-4": {
+         "Arrayz\\": "src/"
       }
+   },
+   "scripts": {
+      "test": "phpunit ./test",
+      "coverage": "XDEBUG_MODE=coverage phpunit --coverage-text ./test"
    }
 }
