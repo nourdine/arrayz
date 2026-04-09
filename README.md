@@ -33,6 +33,7 @@ Arrayz::get("a", $data); // "a"
 Arrayz::get("a > c > d", $data); // "d"
 Arrayz::get("a > c > f > g", $data); // "g"
 Arrayz::get("a > not > f > g", $data); // null
+Arrayz::get("c > f > not", $data); // null
 Arrayz::get("c > f > i > 0", $data); // 1
 Arrayz::get("c > f > l > 1", $data); // ["x", "y"]
 Arrayz::get("c > f > l > 1 > 0", $data); // "x"
